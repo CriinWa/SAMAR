@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Giúp các phần tử có kích thước chính xác hơn */
+}
+
+
+body {
+    /* font gg */
+    font-family: "Roboto", sans-serif;
+    color: #636363;
+     /* Màu sắc mặc định cho toàn bộ trang */
+    line-height: 1.6; /* Khoảng cách dòng mặc định */
+    font-weight: 400;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-inner {
+    padding-top: 115px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    /* color: inherit; */
+    /* inherit: kế thừa màu sắc từ phần tử cha */
+}
+
+.title p{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color : #f55f8d;
+}
+
+.title h2 {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #262626;
+    margin-bottom: 20px;
+}
+
+.section-inner{
+    padding-top: 115px;
+}
+
+.btn-gradient {
+    /*  linear-gradient(hướng trải màu, danh sách các màu );
+      _ to right: màu đang được trải từ trái sang phải
+      _  #f55f8d 0, #f8ae56 51%, #f55f8d 100%: thứ tự màu cần trải, phần trăm sau mã màu là vị trí bắt đầu trải của màu đó.
+        Nếu không thêm phần trăm thì linear-gradient sẽ tự chia vùng màu sao cho đều nhau
+     */
+    background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+    padding: 20px 35px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 20px 0;
+    /* tăng kích thước của màu nền, giúp vùng trải màu rộng hơn làm màu loan ra rộng hơn */
+    background-size: 200%;
+
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    /* outline: none; */
+    border: 1px solid transparent;
+    /* transparent: Background trong suốt */
+    transition: all 0.5s;
+}
+
+/* .btn-gradient:focus { */
+/* kích hoạt focus khi click */
+/* box-shadow: 0 0 0 3px rgba(245, 95, 141, 0.3); */
+/* } */
+
+.btn-gradient:hover {
+    background-position: right center;
+    box-shadow: 0 5px 15px rgba(245, 95, 141, 0.4);
+}
+
+
+/* -------- START HEADER --------*/
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 20px 0; */
+}
+
+.header__content li {
+    padding: 55px 15px;
+}
+
+.header__content li a {
+    color: #070120;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+    /* text in hoa chu dau */
+    transition: all 0.5s;
+}
+
+.header__content li:hover a {
+    color: #f55f8d ; 
+}
+
+.header__content span {
+    display: inline-block;
+    /* color: black; */
+
+}
+
+/* Không có display: inline-block, thẻ <span> chỉ là inline element và không thể sử dụng CSS transform, làm cho animation UptoDown trở nên vô hiệu. */
+
+.header__content li:hover span {
+    animation: UptoDown 0.3s forwards;
+}
+
+.header__content i{
+    font-size: 10px;
+    margin-top: -3px; 
+    vertical-align: middle;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    margin-right: 30px;
+}
+
+
+@keyframes UptoDown {
+    49% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    51% {
+        opacity: 1;
+
+    }
+}
+
+/* -------- END HEADER --------*/
+
+/* -------- START CAROUSEL --------*/
+
+
+.saCarousel {
+    padding-top: 180px;
+    overflow: hidden;
+    /* Ẩn phần nội dung tràn ra ngoài */
+    background-image: url(../image/pic2.png);
+    background-size: 100%;
+    background-position: top;
+}
+
+.saCarousel__content {
+    display: flex;
+    align-items: center;
+}
+
+.saCarousel__article  p{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.saCarousel__article li {
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.saCarousel__left {
+    width: 60%;
+}
+
+.saCarousel__right {
+    width: 40%;
+}
+
+.saCarousel__article i {
+    width: 35px;
+    height: 35px;
+    /* line-height: 1.4; */
+    line-height: 35px;
+    /* Giúp icon căn giữa trong circle 35px × 35px 
+    - Text sẽ căn giữa dọc khi height=line-height*/
+    text-align: center;
+
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    border-radius: 35px;
+    background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+    background-size: 200%;
+    margin-right: 10px;
+}
+
+/* -------- END CAROUSEL --------*/
+
+
+/* -------- START SERVICES --------*/
+.services {
+    background-image: url(../image/bg2.png);
+    background-size: cover;
+    background-position: top center;
+    text-align: center;
+}
+
+.services__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.services__item {
+    border-radius: 10px;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
+    padding: 30px 45px;
+    background: #fff;
+    /* PHẢI có border trước khi dùng border-image */
+    border: 3px solid transparent;
+    /* animation */
+    transform: translateY(0);
+    transition: all 0.5s;
+
+}
+
+.services__item:hover {
+    transform: translateY(-20px);
+    border-image: url(../image/br.png) 2 round;
+    /* border-image có thể override border-radius */
+}
+
+.services__item img{
+    width: 215px;
+}
+
+.services__item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #262626;
+    margin: 15px 0;
+}
+
+/* -------- END SERVICES --------*/
+
+/* -------- START ABOUTUS --------*/
+
+.aboutUs {
+    background-image: url(../image/bg15.png);
+    background-size: 100%;
+    background-position: center right;
+    background-repeat: no-repeat;
+    /* overflow: hidden; */
+    padding-bottom: 80px;
+}
+
+.aboutUs__content {
+    display: flex;
+    justify-content: flex-end;
+    /* để khi absolute .aboutUs__left thì nội dung dồn về phía phải */
+    align-items: center;
+    position: relative;
+    /* Giúp các phần tử con có thể sử dụng position: absolute */
+}
+
+.aboutUs__left{
+    width: 60%;
+    position: absolute; /* Tách khỏi flow */
+    left: -15%;
+    /* width 60% sẽ chiếm của phần tử cha là .aboutUs__content 
+    - do position: absolute nên sẽ KHÔNG chiếm chỗ trong layout flow*/
+}
+
+.aboutUs__right {
+    width: 50%;
+    /* Chỉ element này trong flow nên flex-end đẩy sang phải */
+}
+
+.aboutUs__left img {
+    width: 100%;
+    border-radius: 0 100px 100px 0;
+}
+
+.aboutUs__right p {
+    margin-bottom: 18px;
+}
+
+.aboutUs__right i {
+    font-size: 24px;
+    color:#f55f8d;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* -------- END ABOUTUS --------*/
+
+
+/* -------- START NUMBER --------*/
+
+.number {
+    background-image: url(../image/bg14.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 0 50px 0;
+}
+
+.number__content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.number__item {
+    text-align: center;
+}
+
+.number__item p:first-of-type {
+    font-size: 70px;
+    font-weight: 800;
+    color: #f55f8d;
+    line-height: 1;
+}
+
+.number__item p:last-of-type {
+    font-size: 18px;
+    color:#262626;
+}
+
+.number__item i{
+    font-size: 45px;
+    color: #fff;
+
+    width: 80px;
+    height: 80px;
+    line-height: px;
+    text-align: center;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+    background-size: 200%;
+
+    /* ---------------------------- HỎI THẦY TẠI SAO PHẢI DÙNG DISPLAY: INLINE-BLOCK BG MỚI TRÒN ĐƯỢC, CÁC DISPLAY THAY THẾ : INLINE-GRID--------------- */
+    /* CÁCH 1 */
+    display: inline-grid;
+    place-items: center;
+    /* CÁCH 2 */
+    /* display: inline-block; */
+    /* CÁCH 3 */
+    /* display: inline-flex;
+    align-items: center;
+    justify-content: center; */
+    /* CÁCH 4 */
+    /* display: inline-grid;
+    place-items: center; */
+
+}
+
+/* -------- END NUMBER --------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
