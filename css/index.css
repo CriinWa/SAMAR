@@ -658,7 +658,7 @@ nav ul {
 }
 
 .blog__item {
-    text-align: center;
+    text-align: left;
     background: rgba(245, 95, 141, 0.1);
     border-radius: 8px;
 }

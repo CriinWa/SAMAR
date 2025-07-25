@@ -22,6 +22,14 @@
     <link rel="stylesheet" href="../css/flaticon/flaticon.css" />
     <!-- Fancybox -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- My CSS -->
     <link rel="stylesheet" href="../css/index.css" />
@@ -372,10 +380,120 @@
                 <p>Our Blog</p>
                 <h2>Latest News & Blog</h2>
             </div>
-            <div class="blog__content">
+            <div class="blog__content owl-carousel">
                 <div class="blog__item">
                     <div class="blog__header">
                         <img src="../image/pic1_1.jpg" alt="pic1_1.jpg">
+                        <p>30 April 2025</p>
+                    </div>
+                    <div class="blog__body">
+                        <h3>Lorem ipsum dolor sit amet consectetur. </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolore ad vitae, fuga alias
+                            similique!</p>
+                    </div>
+                    <div class="blog__footer">
+                        <p>
+                            <i class="las la-user-circle"></i>
+                            By
+                            <span>Oh Bama</span>
+                        </p>
+                        <p>
+                            <i class="las la-comment"></i>
+                            <span>Comments 19</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="blog__item">
+                    <div class="blog__header">
+                        <img src="../image/pic2.jpg" alt="pic2.jpg">
+                        <p>30 April 2025</p>
+                    </div>
+                    <div class="blog__body">
+                        <h3>Lorem ipsum dolor sit amet consectetur. </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolore ad vitae, fuga alias
+                            similique!</p>
+                    </div>
+                    <div class="blog__footer">
+                        <p>
+                            <i class="las la-user-circle"></i>
+                            By
+                            <span>Oh Bama</span>
+                        </p>
+                        <p>
+                            <i class="las la-comment"></i>
+                            <span>Comments 19</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="blog__item">
+                    <div class="blog__header">
+                        <img src="../image/pic3.jpg" alt="pic3.jpg">
+                        <p>30 April 2025</p>
+                    </div>
+                    <div class="blog__body">
+                        <h3>Lorem ipsum dolor sit amet consectetur. </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolore ad vitae, fuga alias
+                            similique!</p>
+                    </div>
+                    <div class="blog__footer">
+                        <p>
+                            <i class="las la-user-circle"></i>
+                            By
+                            <span>Oh Bama</span>
+                        </p>
+                        <p>
+                            <i class="las la-comment"></i>
+                            <span>Comments 19</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="blog__item">
+                    <div class="blog__header">
+                        <img src="../image/pic1_1.jpg" alt="pic1_1.jpg">
+                        <p>30 April 2025</p>
+                    </div>
+                    <div class="blog__body">
+                        <h3>Lorem ipsum dolor sit amet consectetur. </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolore ad vitae, fuga alias
+                            similique!</p>
+                    </div>
+                    <div class="blog__footer">
+                        <p>
+                            <i class="las la-user-circle"></i>
+                            By
+                            <span>Oh Bama</span>
+                        </p>
+                        <p>
+                            <i class="las la-comment"></i>
+                            <span>Comments 19</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="blog__item">
+                    <div class="blog__header">
+                        <img src="../image/pic2.jpg" alt="pic2.jpg">
+                        <p>30 April 2025</p>
+                    </div>
+                    <div class="blog__body">
+                        <h3>Lorem ipsum dolor sit amet consectetur. </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolore ad vitae, fuga alias
+                            similique!</p>
+                    </div>
+                    <div class="blog__footer">
+                        <p>
+                            <i class="las la-user-circle"></i>
+                            By
+                            <span>Oh Bama</span>
+                        </p>
+                        <p>
+                            <i class="las la-comment"></i>
+                            <span>Comments 19</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="blog__item">
+                    <div class="blog__header">
+                        <img src="../image/pic3.jpg" alt="pic3.jpg">
                         <p>30 April 2025</p>
                     </div>
                     <div class="blog__body">
@@ -412,6 +530,31 @@
     <script>
         Fancybox.bind('[data-fancybox="gallery"]', {
             // Your custom options for a specific gallery
+        });
+    </script>
+
+    <!-- OWL JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true, //lặp lại các item
+                margin: 30, //khoảng cách giữa các item
+                // nav: true, //hiện mũi tên trái phải
+                responsive: {
+                    0: {
+                        items: 1 //số lượng item khi ở màn hình >= 0
+                    },
+                    600: {
+                        items: 2 //số lượng item khi ở màn hình >= 600px
+                    },
+                    1000: {
+                        items: 3 //số lượng item khi ở màn hình >= 1000px
+                    }
+                }
+            });
         });
     </script>
 
