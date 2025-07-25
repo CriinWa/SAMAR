@@ -153,20 +153,6 @@ nav ul {
   margin-right: 30px;
 }
 
-@keyframes UptoDown {
-  49% {
-    transform: translateY(100%);
-  }
-
-  50% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-
-  51% {
-    opacity: 1;
-  }
-}
 
 /* -------- END HEADER --------*/
 
@@ -498,19 +484,6 @@ nav ul {
   animation: move2 5s infinite;
 }
 
-@keyframes move2 {
-  0% {
-    transform: rotate(1deg) translate(2px, 2px);
-  }
-
-  50% {
-    transform: rotate(-1deg) translate(-2px, -2px);
-  }
-
-  100% {
-    transform: rotate(1deg) translate(2px, 2px);
-  }
-}
 
 /* -------- END FEATURES --------*/
 
@@ -722,3 +695,145 @@ nav ul {
 }
 
 /* -------- END BLOG --------*/
+
+
+/* -------- START FOOTER --------*/
+
+footer {
+    background-image: url(../image/bg4.png);
+    background-repeat: no-repeat;
+    height: auto;
+    background-color: #0e1b1f;
+}
+
+footer::before {
+
+}
+
+.footer__top {
+    display: flex;
+    padding: 50px 60px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0px 30px 0 rgba(0, 0, 0, 0.1);
+    background-image: url(../image/pattern3.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.footer__text, 
+.footer__form {
+    width: 50%;
+}
+
+.footer__text h2 {
+    color: black;
+    font-size: 1.8rem;
+}
+
+.footer__form form {
+    box-shadow: 0 0 60px 0 rgb(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    display: flex;
+    /* để sử dụng flexbox: flex: 1 1 auto */
+}
+
+.footer__form input {
+    padding: 20px;
+    font-size: 1rem;
+    color: #262626;
+    border-radius: 0.5rem 0 0 0.5rem;
+    border: 1px solid #fff;
+    outline: none; /* bỏ outline mặc định khi click vào */
+    flex: 1 1 auto;
+}
+
+.footer__form input:focus,
+.footer__form input:hover {
+    border-color: #f55f8d;
+    /* focus: kích hoạt khi click, tab
+        hover: chỉ kích hoạt khi có trỏ chuột hover vào */
+}
+
+.footer__form button {
+    padding: 20px 35px;
+    font-size: 1.5rem;
+    background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+    background-size: 200%;
+    color: #fff;
+    border-radius: 0 0.5rem 0.5rem 0;
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s ;
+}
+
+.footer__form button:hover {
+    background-position: right center;
+    /* Đẩy màu nền sang phải khi hover */
+}
+
+.footer__form button:hover i{
+    animation: toLeftFromRight 0.5s forwards;
+}
+
+/* -------- END FOOTER --------*/
+
+
+/* ---------- KEYFRAMES ----------*/
+
+@keyframes UptoDown {
+  49% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  51% {
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes move2 {
+  0% {
+    transform: rotate(1deg) translate(2px, 2px);
+  }
+
+  50% {
+    transform: rotate(-1deg) translate(-2px, -2px);
+  }
+
+  100% {
+    transform: rotate(1deg) translate(2px, 2px);
+  }
+}
+
+
+@keyframes toLeftFromRight {
+    49% {
+        transform: translateX(100%);
+    }
+    
+    50% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0.5);
+    }
+    51% {
+        opacity: 1;
+    }
+}
+
+
+/* 
+- display: inline-block làm cho inline elements có thể sử dụng transform và animation
+- inline elements không thể sử dụng transform và animation
+- Transformable elements: block, inline-block, table-cell, flex, grid items
+
+-toLeftFromRight của bạn vẫn dùng được vì icon <i> trong button mặc định đã là inline element và có thể transform
+
+*/
