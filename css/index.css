@@ -798,6 +798,12 @@ footer::before {
 .footer__bottom {
     display: flex;
     padding: 70px 0;
+    position: relative;  /* ← TẠO STACKING CONTEXT MỚI */
+    /* position: relative vừa được thêm vì:
+    khi thêm hiệu ứng load wow thì ko hover được thẻ a footer__item
+    do footer::befor thêm vào sau đè mất footer__item nên ko tương tác được 
+    - vấn đề có liên quan z-index
+     */
 }
 
 .footer__item {
@@ -831,7 +837,7 @@ footer::before {
 }
 
 .footer__item a:hover {
-    color: #fff;
+    color: #fff !important;
 }
 
 .footer__item i {
